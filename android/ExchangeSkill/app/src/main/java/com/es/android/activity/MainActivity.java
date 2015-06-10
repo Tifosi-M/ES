@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.es.android.R;
+import com.es.android.test.HttpRequestExample;
 import com.es.android.test.SavedStateExample;
 
 
@@ -20,6 +21,8 @@ public class MainActivity extends ActionBarActivity {
         SavedStateExample savedStateExample = new SavedStateExample(this);
         savedStateExample.doSave();
         savedStateExample.doGetSaveValue();
+
+        new HttpRequestExample();
     }
 
 
