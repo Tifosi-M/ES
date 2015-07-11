@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 导航菜单 -->
+    <include
+        android:id="@id/navigation_bar"
+        layout="@layout/navigation_bar" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@id/navigation_bar"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:weightSum="1.0" >
+        <!-- 内容 -->
+        <FrameLayout
+            android:id="@id/base_content"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:background="@color/view_bg" />
+    </LinearLayout>
+</RelativeLayout>
