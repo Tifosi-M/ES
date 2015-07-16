@@ -1,0 +1,21 @@
+<resources>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">#8a2be2</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="AppTheme" parent="AppTheme.Base"/>
+
+    <declare-styleable name="MaterialMenuView">
+        <attr name="mm_color" format="color"/>
+        <attr name="mm_scale" format="integer"/>
+        <attr name="mm_transformDuration" format="integer"/>
+        <attr name="mm_pressedDuration" format="integer"/>
+        <attr name="mm_strokeWidth" format="integer"/>
+        <attr name="mm_rtlEnabled" format="boolean"/>
+    </declare-styleable>
+</resources>
