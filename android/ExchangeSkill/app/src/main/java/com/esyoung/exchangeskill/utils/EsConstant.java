@@ -15,4 +15,6 @@ public class EsConstant {
     public static final String VERSION = "0.0.1";
 
     public static String GET_PHONENUMBER_URL = "http://ias.server.matocloud.com/ias/getPhoneNumber"; //for example
+
+    public static String LOGIN_URL = "http://121.40.118.145:8080/es/login";
 }

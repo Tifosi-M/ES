@@ -2,6 +2,7 @@
 package com.esyoung.exchangeskill.job;
 
 import com.esyoung.exchangeskill.http.AsyncHttpResponseHandler;
+import com.esyoung.exchangeskill.http.RequestParams;
 import com.esyoung.exchangeskill.utils.EsLog;
 
 import java.io.UnsupportedEncodingException;
@@ -28,7 +29,7 @@ public abstract class AsyncHttpJob {
 
 	protected abstract String getMethod();
 
-	protected abstract HttpEntity getHttpEntity();
+	protected abstract RequestParams getHttpRequestParams();
 
 	protected abstract void onResponseSuccess(String response);
 
