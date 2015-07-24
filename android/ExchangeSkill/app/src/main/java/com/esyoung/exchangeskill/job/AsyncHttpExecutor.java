@@ -10,6 +10,7 @@ import android.text.TextUtils;
 
 import com.esyoung.exchangeskill.http.AsyncHttpClient;
 import com.esyoung.exchangeskill.http.AsyncHttpResponseHandler;
+import com.esyoung.exchangeskill.http.RequestParams;
 import com.esyoung.exchangeskill.utils.EsLog;
 
 public class AsyncHttpExecutor {
@@ -32,7 +33,7 @@ public class AsyncHttpExecutor {
 			return;
 		}
 		if (job.getMethod().equals("POST")) {
-			post(job.getRequestUrl(), job.getHttpEntity(),
+			post(job.getRequestUrl(), job.getHttpRequestParams(),
 					new MyHttpResponseHandler(job));
 		} else {
 			get(job.getRequestUrl(), new MyHttpResponseHandler(job));
@@ -51,9 +52,9 @@ public class AsyncHttpExecutor {
 		return true;
 	}
 
-	public void post(String url, HttpEntity entity,
+	public void post(String url, RequestParams params,
 			AsyncHttpResponseHandler responseHandler) {
-		httpClient.post(null, url, entity, null, responseHandler);
+		httpClient.post(null, url, params, responseHandler);
 	}
 	
 	public void get(String url, AsyncHttpResponseHandler responseHandlers) {

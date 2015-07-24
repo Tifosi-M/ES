@@ -2,7 +2,10 @@ package com.esyoung.exchangeskill;
 
 import android.app.Application;
 
+import com.esyoung.exchangeskill.job.AsyncHttpExecutor;
+import com.esyoung.exchangeskill.job.LoginJob;
 import com.esyoung.exchangeskill.utils.DesUtil;
+import com.esyoung.exchangeskill.utils.EsLog;
 import com.esyoung.exchangeskill.utils.SavedState;
 
 public class EsApplication extends Application {
@@ -16,6 +19,23 @@ public class EsApplication extends Application {
     public void onCreate() {
         super.onCreate();
         esUtilsInit();
+
+        AsyncHttpExecutor asyncHttpExecutor = new AsyncHttpExecutor();
+        LoginJob loginJob = new LoginJob();
+        loginJob.setListener(new LoginJob.Listener() {
+            //处理http请求回调
+            @Override
+            public void onResponseSuccess(String message) {
+                EsLog.i("Example", message);
+            }
+
+            @Override
+            public void onResponseFailture(String reason) {
+                EsLog.e("Example",reason);
+            }
+        });
+        asyncHttpExecutor.execute(loginJob);
+
     }
 
     private void esUtilsInit(){
