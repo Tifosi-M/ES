@@ -12,21 +12,23 @@
 	<!-- <mvc:resources location="/js/" mapping="/js/**" /> <mvc:resources location="/js-build/" 
 		mapping="/js-build/**" /> <mvc:resources location="/css/" mapping="/css/**" 
 		/> -->
-	<mvc:resources location="/js/" mapping="/js/**" />
-	<mvc:resources location="/js-build/" mapping="/js-build/**" />
-	<mvc:resources location="/css/" mapping="/css/**" />
+	<!--<mvc:resources location="/js/" mapping="/js/**" />-->
+	<!--<mvc:resources location="/js-build/" mapping="/js-build/**" />-->
+	<!--<mvc:resources location="/css/" mapping="/css/**" />-->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:prefix="/" p:suffix=".jsp" />
-		
-			<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
 		<property name="messageConverters">
 			<list>
 				<ref bean="jsonHttpMessageConverter" /><!-- json转换器 -->
 			</list>
 		</property>
 	</bean>
-	<bean id="jsonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />
+	<bean id="jsonHttpMessageConverter"
+		class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />
 
-		
+
 </beans>

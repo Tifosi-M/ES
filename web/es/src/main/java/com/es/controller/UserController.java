@@ -27,5 +27,6 @@ public class UserController {
 	public Map<String, String> login(@RequestParam String username,@RequestParam String password) {
 		return service.login(username,password);
 
+
 	}
 }
