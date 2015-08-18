@@ -15,18 +15,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.es.IService.UserManager.IUserManagerService;
-import com.es.ServiceImpl.UserManager.UserManagerServiceImpl;
-import com.es.domain.User;
 
 @Controller
 public class UserController {
-	@Autowired
-	private IUserManagerService service;
-	@ResponseBody
-	@RequestMapping(value = "/login",method = RequestMethod.POST)
-	public Map<String, String> login(@RequestParam String username,@RequestParam String password) {
-		return service.login(username,password);
+    @Autowired
+    private IUserManagerService service;
+
+    @ResponseBody
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public Map<String, String> login(@RequestParam String username,
+                                     @RequestParam String password,
+                                     @RequestParam String authkey) {
+        return service.login(username, password,authkey);
 
 
-	}
+    }
 }
