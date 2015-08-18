@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <!--<session-factory>-->
+      <!--<property name="connection.url">jdbc:mysql://121.40.118.145:3306/Eskill-sql</property>-->
+      <!--<property name="connection.driver_class">com.mysql.jdbc.Driver</property>-->
+      <!--<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>-->
+      <!--<property name="hibernate.c3p0.min_size">5</property>-->
+      <!--<property name="hibernate.c3p0.max_size">20</property>-->
+      <!--<property name="hibernate.c3p0.timeout">1800</property>-->
+      <!--<property name="hibernate.c3p0.max_statements">50</property>-->
+      <!--&lt;!&ndash;<mapping class="com.blog.entity.ArticleEntity"/>&ndash;&gt;-->
+      <!--&lt;!&ndash;<mapping class="com.blog.entity.CommentEntity"/>&ndash;&gt;-->
+      <!--&lt;!&ndash;<mapping class="com.blog.entity.UserEntity"/>&ndash;&gt;-->
+      <!--<mapping class="com.es.domain.TUsersEntity"/>-->
+      <!--&lt;!&ndash; DB schema will be updated if needed &ndash;&gt;-->
+    <!--&lt;!&ndash; <property name="hbm2ddl.auto">update</property> &ndash;&gt;-->
+  <!--</session-factory>-->
+
+</hibernate-configuration>
